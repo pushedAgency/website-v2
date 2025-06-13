@@ -1,26 +1,228 @@
 @import "tailwindcss";
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  transition: all ease-in-out 200ms;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  background-color: #181818;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+img {
+  height: auto;
+}
+
+main {
+  min-height: 100svh;
+  background-color: #181818;
+}
+
+.accent {
+  color: #17e6da;
+}
+
+.buttonComponentLine {
+  border-radius: 10px;
+  padding: 0.5vw 1vw;
+  display: flex;
+  align-items: center;
+}
+
+.buttonComponentLine:hover {
+  background-color: #304049;
+}
+
+.buttonComponentLine:hover > p {
+  color: #17e6da !important;
+}
+
+hr {
+  color: white;
+}
+
+h3,
+p {
+  color: white;
+}
+
+.paddingSection {
+  padding: 3vw 5vw;
+}
+
+.headerSection {
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+
+  background-color: #1f272f;
+  color: white;
+  border-radius: 0 0 20px 20px;
+}
+
+.bottomSection:hover {
+  background-color: #1f2327;
+  color: #17e6da;
+}
+
+.bottomSection {
+  z-index: 100;
+  width: fit-content;
+
+  border-radius: 20px 20px 0 0;
+  padding: 15px;
+
+  background-color: #181818;
+  border: 3px solid #1f272f;
+  color: #304049;
+}
+
+.activeBottom {
+  background-color: #1f272f;
+  color: white;
+}
+
+.moduleContent {
+  z-index: 10;
+  width: 50svw;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.videoComponentLine {
+  padding: 10px;
+  border-radius: 20px;
+  margin-right: 1em;
+  display: flex;
+  justify-content: left;
+}
+
+.videoThumbnail {
+  width: 250px;
+}
+
+.videoColumnParagraph {
+  background-color: #304049;
+  padding: 1%;
+  width: 30%;
+}
+
+.videoParagrapgh {
+  padding: 3vw 2vw 10vw 0;
+  width: 50svw;
+}
+
+.videoComponentLineDiv:hover > .videoComponentLine {
+  background-color: #304049;
+}
+
+.videoComponentLineDiv:hover > .videoComponentLine h3 {
+  color: #17e6da;
+}
+
+.videoComponentLine:hover {
+  background-color: #304049;
+}
+
+.videoComponentLine:hover > .videoTextline h3 {
+  color: #17e6da !important;
+}
+
+.videoColumn {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.imgVideo {
+  width: 30%;
+}
+
+.lenghtVideo {
+  color: #17e6da !important;
+  opacity: 50%;
+}
+
+.borderImg {
+  border-radius: 15px;
+}
+
+mux-player {
+  --controls-backdrop-color: rgb(0 0 0 / 30%);
+  width: 100%;
+}
+
+.loginDiv {
+  background-color: #304049;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.loginDiv input {
+  padding: 15px;
+  background-color: #1f272f;
+  border-radius: 10px;
+  margin-right: 20px;
+  border: 1px solid #1f272f;
+}
+
+.loginDiv input:hover {
+  border: 1px solid #17e6da;
+}
+
+.loginDiv input:focus,
+.loginDiv input:active {
+  background-color: #304049;
+  border: 1px solid #17e6da;
+}
+
+.error {
+  border: 1px solid red !important;
+}
+
+.loginDiv button {
+  padding: 15px;
+  background-color: #17e6da;
+  border-radius: 10px;
+  color: #181818;
+  border: 1px solid #17e6da;
+}
+
+.loginDiv button:hover {
+  cursor: pointer;
+  background-color: #1f272f;
+  color: white;
+  border: 1px solid #17e6da;
+}
+
+.styleResponsive{
+  display: none;
+}
+
+.styleNotResponsive{
+  display: block;
+}
+
+@media screen and (max-width: 700px) {
+  .styleNotResponsive{
+    display: none;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .styleResponsive{
+    display: block;
+    color: #17e6da;
+    background-color: #304049;
+    width: 100svw;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
