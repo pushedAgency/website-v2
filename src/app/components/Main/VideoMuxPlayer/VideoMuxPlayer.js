@@ -1,4 +1,4 @@
-"use client"; // Indica que este es un componente del lado del cliente
+"use client";
 
 import { useEffect, useState } from "react";
 import MuxPlayer from "@mux/mux-player-react"; // Importa el componente MuxPlayer de React

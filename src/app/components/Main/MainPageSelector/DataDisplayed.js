@@ -12,8 +12,6 @@ const DataDisplayed = ({ data, title }) => {
     data?.[0]?.playbackId
   );
 
-  console.log(data); // Mantenido según tu código original
-
   // Función auxiliar para obtener la descripción del título
   const getDescriptionForTitle = (currentTitle) => {
     switch (currentTitle) {
