@@ -10,25 +10,21 @@
     {
       "filename": "Como pasar de 0 a 100",
       "playbackId": "KIl3zSgUMcm37onYi693y00ihqqZCZcaZxbwIf301ejzo",
-      "signedId": "Y8oMFcHgaUxYFtbH1xBaflcZ7bQHGse00LcgqMtbR9JM",
       "assetId": "LAiOjeEeZSS4MXRJUiaOBCE5E2e019GZ00eGvzkOZSYEI"
     },
     {
       "filename": "Lo que tenes que saber antes de escalar",
       "playbackId": "rQI4sLT4SFtc5n4sGywpZeeFNLfdTwh0002XAh7UXFF1w",
-      "signedId": "MjV6em1LCyqJ7Gx8I01Uk3FH2UBNhxPunZlVyDTCUc01Q",
       "assetId": "4UGzhTPPzFjgCbOdIwEqYaFvUcntx5T8z4Bn7USAYds"
     },
     {
       "filename": "Problemas que vas a tener con tu negocio",
       "playbackId": "Uis00NoumbJqFxD01es5Fvxdzd95b9M6wX2BOlXv58Mz00",
-      "signedId": "mKksMs2dtDtbz01pUBI57Y02x4yRxDjJIBSkkujVFJ2Po",
       "assetId": "4w6GWarmRSDWJ3wyuwTRCiV23EK21RcDVGQble6OdgQ"
     },
     {
       "filename": "Si no ves esto no te va a ir bien",
       "playbackId": "9fc00Kpb01aUS00J3EE02qEi2q00K2zzEIo01A5k01C8972srM",
-      "signedId": "h02UJhtWrqB9yN7rfNJm1qSWnVttmnF3DDx6Km9XL2wU",
       "assetId": "8QbGp3A2Ela2bpSbmegl6q00GqARe5k6ia2Z8MH01q9jY"
     }
   ],
@@ -152,35 +148,30 @@
       "filename": "Clase 01 - Creando cuenta Business Manager",
 
       "playbackId": "z7JL01eQrdtwhl4RT02GJaJwknYN02IjMDO72LkbMS9Sg8",
-      "signedId": "EDHljFjimVtxM4f4GjWoz9wUWCoPXIeNY01Opv01Nynxo",
       "assetId": "BTVbonVRNdfc56h4013zCUhGad7ro029iN6VjQpXVt4dI"
     },
     {
       "filename": "Clase 02 - Creando portafolio comercial",
 
       "playbackId": "Vlz2ryYUc00VA01hgC500MAP3CPGjziuxPzKS595A9dcOY",
-      "signedId": "j6aW01J9CQ8tJUP00Wbatzp4a6ox63enD9J6hMxKqsARM",
       "assetId": "lcfhOqWXBeJvWIuZZYDavoRlkFHNuTURCwg00bz6XMlo"
     },
     {
       "filename": "Clase 03 - Creando página y cuenta publicitaria",
 
       "playbackId": "hhn01vlb02jMyixSbi6B6bovPh3lxVFkF7unFjdIzN9bY",
-      "signedId": "Hk3SSrY5bttIHQYAmPsAuVBLAAG8vcnGLUjBHhY26qk",
       "assetId": "JUPWjhQNjewvm9k02SAghrgkD01f00XHPD6zu4VbOxoYJ4"
     },
     {
       "filename": "Cómo lanzar un testeo en Meta (ADS)",
 
       "playbackId": "x5yXMHMTrGSCXx7MLvhF4setqAdys7fzFAhutw6vBQ4",
-      "signedId": "X2rpPY81XqTogxoNCwP027e1WX441yjoGuSGwG7hozMY",
       "assetId": "VwW005RLtMJubXWpkroLypL4ZUuodD4RlbHZvdx1FXaM"
     },
     {
       "filename": "Cómo subir una campaña de calentamiento",
 
       "playbackId": "TVGuKNuN3RgrovzvNMZI5F00Jm5UnLWBPMnbDCwZoKKc",
-      "signedId": "6u6wBVSQalaDCV902gNbiuqY9LJNM301Ep8OjRPq6bUOU",
       "assetId": "H01umxorNUjI00Xlbjt02UCCAYbL4a00bNTpBkZiJgQjVrE"
     },
     {
@@ -229,6 +220,17 @@
 
   "CLASES DE LA MENTORIA": [
     {
+      "filename": "17 - 06 - 2025",
+      "playbackId": "BSD38KM6d7c00dMlrxQesdke5GT01iDUU5Rkpg3LePQcU",
+      "assetId": "cYc02YN400cZ79UrMieaMtppcGVA005vbFDxWagM4143nI"
+    },
+    {
+      "filename": "13 - 06 - 2025",
+      "playbackId": "3GbVtXlQxkG4aRN00Fl9jbSEDrAUzAUFKs2QssrbFxY00",
+      "assetId": "rrLZ9btSUlMIK01CmeOCPLqxz5OBJS3wU9onQjcsUsuk"
+    },
+
+    {
       "filename": "30 - 05 - 2025",
       "playbackId": "5u684f33xJoiHJEsyA01qQX401LBEXAumiEoETYmtIqlU",
       "assetId": "fflOlS1hLABNN91PxDq01FonTnHn1XCBRa7MxmM47Fi8"
@@ -241,67 +243,56 @@
     {
       "filename": "02 - 05 - 2025",
       "playbackId": "UCACowGZjoUAfpZl8yNpRsfUZq6LhM9GtGtpAKOXlpE",
-      "signedId": "D21oroxiiC7N8YFOifYT01qjX73aeO5fRTrnPcZ0101yTg",
       "assetId": "ob3YZ01ibOPbjq9Toh3DBDUNm00KR4vwL901n01h01L6GHCs"
     },
     {
       "filename": "29 - 04 - 2025",
       "playbackId": "75Nkup00qXuWMr01rG7PVu2gugP00mIHUQ1S13PshTO8vY",
-      "signedId": "ysokR6JM0000oalkKfoizMO7HqNn4FEELyq02C25fzcNdc",
       "assetId": "BE61F33OX3vUAIzm9X3p7qG8wUZ5c84ethj6Wy00z00Fo"
     },
     {
       "filename": "25 - 04 - 2025",
       "playbackId": "YansKBQ007NiTRB63028EaPZ2MkuQso5OOVojjCyyUgvE",
-      "signedId": "ROEbrwLvjwnP009hmofSH3VlgVlOVzN102hL2YuBZBrfA",
       "assetId": "xeSWJVnIv01f8Ipwi3Rk2WipPdehwrQxwDrUcroJgIR8"
     },
     {
       "filename": "22 - 04 - 2025",
       "playbackId": "02r2jto200Ck9zgmReKtZUuLeapamutyJAu2B4BZbQHsE",
-      "signedId": "t3ol9YXbQZzidKESJYc00KDo00mL6mkljqLLe7Yis9m28",
       "assetId": "xQWuyaVbQjA7kRaI7Ta3qBYuxXkTq1byPH1KkYTXIoc"
     },
     {
       "filename": "11 - 04 - 2025",
       "playbackId": "uVIaoYQROvGdxjs76lYa02V02PQY02IG6guguL1kUgiMbc",
-      "signedId": "8594LMRxfrYV5mpoaN4016KSQCppfyBQ9cxEzcdi00h02A",
       "assetId": "Pt4ixE5lZpiNrMEQvRam1vEbC2Xj6A83GP7QGjK02rVg"
     },
     {
       "filename": "21 - 03 - 2025",
       "playbackId": "DP1qhqv00FA8JJVeZEtMcpYGtE2XDg2uJgt009aKt6yBQ",
-      "signedId": "RLJlBllIbSSZZoN1Cp9zfjnYGEMj6BySCQ6fzlQ8x8U",
       "assetId": "1l71NiUOi15lp95LhwGytijPqAT02RncbBQH3AHosdDw"
     },
     {
       "filename": "18 - 03 - 2025",
       "playbackId": "6lgyQkClstd1S027wW02t8201B8gQHH5ZKSkxzpV5dfIBQ",
-      "signedId": "wXWymsWtzSGye49c02MLsAS6c0055Efbewc7bz01BiJnDE",
       "assetId": "g1H00GcHeBJTEYuRdbah00lkNceDCv4DPN4y2avBuo2gI"
     },
     {
       "filename": "14 - 03 - 2025",
       "playbackId": "01J7hYXEHwT1OXKuRzWyzfwrpIudY6p00mPIs502RJzl9s",
-      "signedId": "zPG8e5S7fq6KpoKeJz2S9gcPOrXTJTQur9A6SMYOvHE",
       "assetId": "GYLfMN5vrv00CkUNSjwqBrA3DH9929fCxw14iqmcCI98"
     },
     {
       "filename": "11 - 03 - 2025",
       "playbackId": "hAucJAY8EsO7OC00CM902PrDMXnVsO4VnU004tvoTjCrPI",
-      "signedId": "BoVFKokwB016xg2jcmT6A2ljvVBIVg8vweeN7rLV2N8k",
       "assetId": "8CrbwQN83200EuBrAG8OOKSweGgW2F5ZOMOy01ysSbwFc"
     },
     {
       "filename": "09 - 02 - 2025",
       "playbackId": "Z02HKSdtlJKEv9ZL4JD3M2jveqKyZb02ovpfgiLkFe98w",
-      "signedId": "GRREpjZU8kIjsLC00lDLdlFBRMJHvt9OGufwZROL8gjU",
       "assetId": "3PjqtR9ctQGRlb4B600Y01bGcMOZnV027szTY9i4qESNrU"
     },
     {
       "filename": "23 - 01 - 2025",
       "playbackId": "fsHbwFoTXfMfweEM4tmexMukqsHveDHIgdrU02UtNrqM",
-      "signedId": "XlIoCBOBu1CgmeLkhfEu00WVc2Au4cnp9RJjEBwlYpWI",
       "assetId": "2328fcKGOiiKm2RRDeg5xz1RKrYb4f3003D1xSnbqmt00"
     }
   ]
