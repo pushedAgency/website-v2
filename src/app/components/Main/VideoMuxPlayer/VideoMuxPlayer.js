@@ -44,14 +44,14 @@ export default function VideoMuxPlayer({ id }) {
   return (
     <div className="flex items-center justify-center w-screen">
       <div className="w-2/3 h-full">
-        {/* Muestra un spinner de carga si isLoading es true y no hay errores */}
         {isLoading && !error && (
           <div className="flex items-center justify-center h-48 animate-pulse">
             <Image
               src={`/images/loading.gif`} // Asegúrate de que esta ruta sea correcta y el gif exista
               alt="Cargando video, por favor espera" // Texto alternativo descriptivo para accesibilidad
-              width={100}
-              height={100}
+              width={30}
+              height={30}
+              unoptimized
             />
           </div>
         )}
