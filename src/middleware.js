@@ -6,44 +6,50 @@ export async function middleware(req) {
 
   // 🔒 Rutas que requieren autenticación
   const protectedFolders = ['/main', '/singleVideo', '/home'];
-  
-  // 🟢 Rutas accesibles sin autenticación
-  const allowedPaths = ['/login', '/api/login'];
 
-  // Verifica si la ruta está dentro de una carpeta protegida
+  // 🔹 Obtiene la cookie 'authenticated'
+  const isAuthenticated = req.cookies.get('authenticated')?.value;
+
+  // 🔹 1. Redirige usuarios no autenticados si acceden a rutas protegidas
   const isWithinProtectedFolder = protectedFolders.some(path =>
     pathname.startsWith(path)
   );
 
-  // Determina si la ruta debería estar protegida
-  const shouldBeProtected = isWithinProtectedFolder;
-
-  // Obtiene la cookie 'authenticated'
-  const isAuthenticated = req.cookies.get('authenticated')?.value;
-
-  // Si la ruta está en la lista de permitidas, se deja pasar
-  if (allowedPaths.includes(pathname)) {
-    return NextResponse.next();
-  }
-
-  // Si la ruta debería estar protegida y no está autenticado, redirige al login
-  if (shouldBeProtected && isAuthenticated !== 'true') {
+  if (isWithinProtectedFolder && isAuthenticated !== 'true') {
     const url = req.nextUrl.clone();
-    url.pathname = '/login';
-    url.searchParams.set('redirect', pathname);
+    url.pathname = '/';
+    url.searchParams.set('message', 'login-required');
     return NextResponse.redirect(url);
   }
 
-  // Deja pasar todas las demás rutas (como la landing pública '/')
+  // 🔹 2. Redirige usuarios autenticados de la raíz '/' automáticamente a /home
+  if (pathname === '/' && isAuthenticated === 'true') {
+    const url = req.nextUrl.clone();
+    url.pathname = '/home';
+    return NextResponse.redirect(url);
+  }
+
+  // 🔹 3. Fallback: cualquier ruta desconocida redirige a '/'
+  const knownPaths = ['/', '/main', '/singleVideo', '/home', '/api/login'];
+  const isKnownPath = knownPaths.some(path => pathname.startsWith(path));
+
+  if (!isKnownPath) {
+    const url = req.nextUrl.clone();
+    url.pathname = '/';
+    url.searchParams.set('message', 'not-found');
+    return NextResponse.redirect(url);
+  }
+
+  // 🔹 4. Resto de rutas → dejan pasar
   return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-    '/main/:path*',         // Protege /main y subrutas
-    '/singleVideo/:path*',  // Protege /singleVideo y subrutas
-    '/home/:path*',         // 🔒 Nueva carpeta protegida
-    '/api/:login',          // Permite la API de login
-    '/login',               // Ejecuta también en la página de login
+    '/main/:path*',
+    '/singleVideo/:path*',
+    '/home/:path*',
+    '/api/:login',
+    '/',
   ],
 };
