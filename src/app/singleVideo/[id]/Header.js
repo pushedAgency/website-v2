@@ -73,7 +73,7 @@ const Header = ({ id }) => {
   return (
     <div>
       <section className="headerSection paddingSection flex items-center gap-2">
-        <Link href={"/"}>
+        <Link href={"home"}>
           <IoMdArrowRoundBack className="text-2xl" />
         </Link>
         <h1 className="font-extrabold text-2xl">
