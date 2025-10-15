@@ -1,18 +1,15 @@
-import React from "react";
-import MainPageSelector from "@/app/components/Main/MainPageSelector/MainPageSelector";
+import { Suspense } from "react";
+import LoginForm from "@/app/login/LoginForm";
 
-const page = () => {
+export default function LoginPage() {
   return (
-    <main className="">
+    <Suspense fallback={<div>Cargando...</div>}>
       <div className="styleNotResponsive">
-        <MainPageSelector />
+        <LoginForm />
       </div>
-
       <div className="styleResponsive">
         <h1>Esta pagina esta diseñada para verse desde una Computadora</h1>
       </div>
-    </main>
+    </Suspense>
   );
-};
-
-export default page;
+}

@@ -1,60 +1,49 @@
 // middleware.js
 import { NextResponse } from 'next/server';
 
-const SECRET_PASSWORD_HASH = process.env.KEY_PASS_HASH;
-
 export async function middleware(req) {
   const pathname = req.nextUrl.pathname;
 
-  // Define rutas que serán protegidas (o que contienen rutas protegidas)
-  const protectedFolders = ['/main', '/singleVideo']; // NO incluyas '/api' aquí
+  // 🔒 Rutas que requieren autenticación
+  const protectedFolders = ['/main', '/singleVideo', '/home'];
   
-  // Excepciones: Rutas que siempre deben ser accesibles (ej. login API, la página de login en sí)
-  const allowedPaths = ['/login', '/api/login']; 
+  // 🟢 Rutas accesibles sin autenticación
+  const allowedPaths = ['/login', '/api/login'];
 
-  const isLoginPage = pathname === '/login';
-  const isApiLogin = pathname === '/api/login';
-  const isRootPath = pathname === '/';
-
-  // Verifica si la ruta actual es una carpeta protegida (incluyendo subrutas)
+  // Verifica si la ruta está dentro de una carpeta protegida
   const isWithinProtectedFolder = protectedFolders.some(path =>
     pathname.startsWith(path)
   );
 
-  // Determina si la ruta actual DEBERÍA estar protegida
-  // Es protegida si es la raíz o si está dentro de una carpeta protegida
-  const shouldBeProtected = isRootPath || isWithinProtectedFolder;
+  // Determina si la ruta debería estar protegida
+  const shouldBeProtected = isWithinProtectedFolder;
 
-  // Obtiene el valor de la cookie 'authenticated'
+  // Obtiene la cookie 'authenticated'
   const isAuthenticated = req.cookies.get('authenticated')?.value;
 
-  // 1. Si la ruta es una de las permitidas (como /login o /api/login), siempre permite el acceso
+  // Si la ruta está en la lista de permitidas, se deja pasar
   if (allowedPaths.includes(pathname)) {
     return NextResponse.next();
   }
 
-  // 2. Si la ruta debería estar protegida (según 'shouldBeProtected')
-  if (shouldBeProtected) {
-    // Y el usuario NO está autenticado
-    if (isAuthenticated !== 'true') {
-      const url = req.nextUrl.clone();
-      url.pathname = '/login';
-      url.searchParams.set('redirect', pathname);
-      return NextResponse.redirect(url);
-    }
-    return NextResponse.next();
+  // Si la ruta debería estar protegida y no está autenticado, redirige al login
+  if (shouldBeProtected && isAuthenticated !== 'true') {
+    const url = req.nextUrl.clone();
+    url.pathname = '/login';
+    url.searchParams.set('redirect', pathname);
+    return NextResponse.redirect(url);
   }
 
+  // Deja pasar todas las demás rutas (como la landing pública '/')
   return NextResponse.next();
 }
 
-// El 'matcher' le dice a Next.js para qué rutas debe ejecutar este middleware
 export const config = {
   matcher: [
-    '/',                      // Activa el middleware para la ruta raíz exacta
-    '/main/:path*',           // Activa el middleware para /main y cualquier subruta
-    '/singleVideo/:path*',    // Activa el middleware para /singleVideo y cualquier subruta
-    '/api/:login',            // Solo el login API. El resto de /api no está protegido por el middleware de auth
-    '/login',                 // Activa el middleware para la página de login
+    '/main/:path*',         // Protege /main y subrutas
+    '/singleVideo/:path*',  // Protege /singleVideo y subrutas
+    '/home/:path*',         // 🔒 Nueva carpeta protegida
+    '/api/:login',          // Permite la API de login
+    '/login',               // Ejecuta también en la página de login
   ],
 };
